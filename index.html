@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction</title>
+</head>
+<body>
+    <h1>Loan Prediction App</h1>
+    <form method="post">
+        <label for="ApplicantIncome">Applicant Income:</label>
+        <input type="text" id="ApplicantIncome" name="ApplicantIncome" required><br><br>
+
+        <label for="CoapplicantIncome">Coapplicant Income:</label>
+        <input type="text" id="CoapplicantIncome" name="CoapplicantIncome" required><br><br>
+
+        <label for="Credit_History">Credit History (1 for good, 0 for bad):</label>
+        <input type="text" id="Credit_History" name="Credit_History" required><br><br>
+
+        <label for="Self_Employed">Self Employed (1 for yes, 0 for no):</label>
+        <input type="text" id="Self_Employed" name="Self_Employed" required><br><br>
+
+        <label for="Property_Area">Property Area (1 for urban, 2 for semi-urban, 3 for rural):</label>
+        <input type="text" id="Property_Area" name="Property_Area" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
